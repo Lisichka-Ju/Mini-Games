@@ -1,4 +1,5 @@
 // ====== СПИСОК ВСЕХ РАБОТ ======
+// Чтобы добавить новую — допиши объект в конец массива.
 const works = [
     {
         href: '../Mini-Games/3/index.html',
@@ -46,22 +47,16 @@ const works = [
 // ==============================
 
 
-// Находим контейнер для работ и кнопку "Еще"
 const container = document.getElementById('works');
 const button = document.getElementById('more');
-
-// Сколько работ уже показано
 let shown = 0;
 
 // Показать следующие 6 работ (или сколько осталось)
 function show() {
-    // Берём порцию из массива
     const part = works.slice(shown, shown + 6);
-
-    // Если работ больше нет — выходим
     if (part.length === 0) return;
 
-    // Генерируем HTML: разбиваем порцию на секции по 3 карточки
+    // Разбиваем на секции по 3
     let html = '';
     for (let i = 0; i < part.length; i += 3) {
         const row = part.slice(i, i + 3).map(w => `
@@ -85,16 +80,13 @@ function show() {
         `;
     }
 
-    // Вставляем HTML в контейнер
     container.insertAdjacentHTML('beforeend', html);
-
-    // Обновляем счётчик
     shown += part.length;
 
     // Если работы закончились — прячем кнопку
     if (shown >= works.length) button.style.display = 'none';
 }
 
-// Первичный показ и клик по кнопке
+// Старт + клик
 show();
 button.addEventListener('click', show);
