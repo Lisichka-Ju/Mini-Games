@@ -1,0 +1,73 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #03030f;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: none;
+}
+
+#stage {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    cursor: crosshair;
+}
+
+#hint {
+    position: fixed;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+    color: rgba(140, 195, 255, 0.55);
+    font: 12px/1.4 system-ui, sans-serif;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    pointer-events: none;
+    user-select: none;
+    transition: opacity 0.4s;
+}
+
+#toast {
+    position: fixed;
+    left: 50%;
+    top: 40px;
+    transform: translate(-50%, -20px);
+    color: #dcebff;
+    font: 14px/1 system-ui, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(20, 40, 70, 0.6);
+    border: 1px solid rgba(120, 180, 255, 0.35);
+    padding: 10px 22px;
+    border-radius: 999px;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+    transition: opacity 0.25s, transform 0.25s;
+    backdrop-filter: blur(6px);
+}
+
+#toast.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.pulse {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    border: 2px solid rgba(150, 210, 255, 0.9);
+    pointer-events: none;
+    animation: pulseOut 0.4s ease-out forwards;
+}
+
+@keyframes pulseOut {
+    from { transform: scale(0.4); opacity: 1; }
+    to   { transform: scale(2.2); opacity: 0; }
+}
