@@ -39,7 +39,7 @@ const works = [
     },
     {
         href: '../Mini-Games/7/index.html',
-        img: '../Mini-Games/img/7.PNG',
+        img: '../Mini-Games/img/7.png',
         title: 'Particles',
         text: 'Это мини игра написанная с помощью js. Управление мышкой. При двойном клике частицы меняют форму.'
     }
