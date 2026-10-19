@@ -132,6 +132,7 @@ hr {
 .hero-content {
   text-align: center;
   margin-top: calc(var(--index) * 5.5);
+  margin-bottom: calc(var(--index) *20.5);
 }
 
 .button-start {
