@@ -42,6 +42,12 @@ const works = [
         img: '../Mini-Games/img/7.png',
         title: 'Particles',
         text: 'Это мини игра написанная с помощью js. Управление мышкой. При двойном клике частицы меняют форму.'
+    },
+    {
+        href: '../Mini-Games/8/index.html',
+        img: '../Mini-Games/img/8.png',
+        title: '3D Object',
+        text: 'Это мини игра написанная с помощью js. Управление мышкой.'
     }
 ];
 // ==============================
